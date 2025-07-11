@@ -1,0 +1,328 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>@ganja.world</title>
+  <link rel="icon" href="https://github.com/ero1337x/luvsx/blob/main/nigga.png?raw=true" type="image/png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10%); }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-bounce {
+  animation: bounce 3s infinite;
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.affiliated-section {
+  text-align: center;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+.affiliated-title {
+  font-family: monospace;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.affiliated-logo img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.user-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.user-tag {
+  background-color: #111;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: monospace;
+  transition: color 0.2s;
+}
+
+.user-tag:hover {
+  background-color: #222;
+}
+
+
+  </style>
+</head>
+<body class="bg-black text-white font-mono overflow-x-hidden">
+
+  <nav class="flex justify-between items-center px-6 py-3 backdrop-blur bg-black/10 border-b border-white/10 text-white">
+  <div class="text-lg font-bold tracking-widest select-none">@ganja</div>
+  <ul class="flex space-x-4 text-sm font-medium">
+    <li><a href="#Main" class="hover:underline">Main</a></li>
+    <li><a href="#Admins" class="hover:underline">Admins</a></li>
+    <li><a href="#BG" class="hover:underline">BG</a></li>
+    <li><a href="#us" class="hover:underline">Server</a></li>
+  </ul>
+</nav>
+
+  <div class="fixed inset-0 -z-10">
+    <img src="https://github.com/ero1337x/luvsx/blob/main/gank.jpg?raw=true" alt="Background" class="w-full h-full object-cover blur-2xl brightness-50" />
+  </div>
+
+  <section id="Main" class="section pt-16">
+
+    <div class="absolute inset-0 pointer-events-none z-10">
+      <div class="absolute w-1 h-1 bg-white rounded-full animate-pulse" style="left:10%; top:20%;"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full animate-pulse" style="left:40%; top:50%; animation-delay:1s;"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full animate-pulse" style="left:80%; top:10%; animation-delay:2s;"></div>
+    </div>
+
+    <div class="absolute inset-0 pointer-events-none z-10">
+      <div class="absolute text-white/20 text-lg font-mono animate-bounce" style="left:5%; top:10%;">r</div>
+      <div class="absolute text-white/20 text-lg font-mono animate-bounce" style="left:30%; top:70%; animation-delay:1s;">e</div>
+      <div class="absolute text-white/20 text-lg font-mono animate-bounce" style="left:60%; top:40%; animation-delay:2s;">v</div>
+    </div>
+
+    <div class="relative z-20 flex flex-col items-center text-center space-y-8">
+      <div class="mb-8">
+         <img src="https://github.com/ero1337x/luvsx/blob/main/ganja.png?raw=true" alt="GANJA" class="w-30 h-30 object-contain select-none" />
+      </div>
+      <p class="text-xl text-white/60 select-none">ganja #revshit</p>
+      <div class="flex flex-wrap justify-center space-x-2 text-sm text-white/40 select-none">
+        <span>biography: <a href="https://revshit.xyz" class="underline">revshit.xyz</a></span>
+        <span>•</span><span>Status: Active</span>
+      </div>
+      <div class="flex items-center justify-center space-x-2">
+        <div class="w-1 h-1 bg-green-500 rounded-full animate-ping"></div>
+        <p class="text-sm text-white/70 select-none"><span id="viewer-count">0</span> viewers</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="Admins" class="section">
+  <div class="flex flex-col items-center">
+    <h2 class="text-2xl font-bold text-white mb-8 select-none">hall of fame:</h2>
+    <div class="grid grid-cols-4 md:grid-cols-5 gap-6 max-w-2x1">
+
+      <div class="flex flex-col items-center cursor-pointer group">
+        <div class="relative mb-2">
+          <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
+            <img src="https://github.com/ero1337x/luvsx/blob/main/yuno.png?raw=true" alt="Yuno's Profile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-black flex items-center justify-center">
+            <div class="bg-red-500 w-2 h-2 rounded-full"></div>
+          </div>
+          <div class="absolute inset-0 rounded-full border-2 border-red-400/30 animate-ping"></div>
+        </div>
+        <span class="text-sm text-white/80 group-hover:text-white transition-colors select-none">Yuno</span>
+        <div class="text-xs mt-1 bg-black/50 text-white/60 rounded px-2 py-1 select-none">Admin</div>
+      </div>
+
+      <div class="flex flex-col items-center cursor-pointer group">
+        <div class="relative mb-2">
+          <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
+            <img src="https://github.com/ero1337x/luvsx/blob/main/cent.png?raw=true" alt="Cent's Profile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/60'" />
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-black flex items-center justify-center">
+            <div class="bg-green-500 w-2 h-2 rounded-full"></div>
+          </div>
+          <div class="absolute inset-0 rounded-full border-2 border-green-400/30 animate-ping"></div>
+        </div>
+        <span class="text-sm text-white/80 group-hover:text-white transition-colors select-none">Cent</span>
+        <div class="text-xs mt-1 bg-black/50 text-white/60 rounded px-2 py-1 select-none">Admin</div>
+      </div>
+
+      <div class="flex flex-col items-center cursor-pointer group">
+        <div class="relative mb-2">
+          <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
+            <img src="https://github.com/ero1337x/luvsx/blob/main/sabon.jpg?raw=true" alt="$abon's Profile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-black flex items-center justify-center">
+            <div class="bg-green-500 w-2 h-2 rounded-full"></div>
+          </div>
+          <div class="absolute inset-0 rounded-full border-2 border-green-400/30 animate-ping"></div>
+        </div>
+        <span class="text-sm text-white/80 group-hover:text-white transition-colors select-none">$abon</span>
+        <div class="text-xs mt-1 bg-black/50 text-white/60 rounded px-2 py-1 select-none">Admin</div>
+      </div>
+
+      <div class="flex flex-col items-center cursor-pointer group">
+        <div class="relative mb-2">
+          <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
+            <img src="https://github.com/ero1337x/luvsx/blob/main/jared.jpg?raw=true" alt="Jared's Profile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-black flex items-center justify-center">
+            <div class="bg-green-500 w-2 h-2 rounded-full"></div>
+          </div>
+          <div class="absolute inset-0 rounded-full border-2 border-green-400/30 animate-ping"></div>
+        </div>
+        <span class="text-sm text-white/80 group-hover:text-white transition-colors select-none">Jared</span>
+        <div class="text-xs mt-1 bg-black/50 text-white/60 rounded px-2 py-1 select-none">Admin</div>
+      </div>
+
+      <div class="flex flex-col items-center cursor-pointer group">
+        <div class="relative mb-2">
+          <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
+            <img src="https://github.com/ero1337x/luvsx/blob/main/jared.jpg?raw=true" alt="Jared's Profile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-black flex items-center justify-center">
+            <div class="bg-green-500 w-2 h-2 rounded-full"></div>
+          </div>
+          <div class="absolute inset-0 rounded-full border-2 border-green-400/30 animate-ping"></div>
+        </div>
+        <span class="text-sm text-white/80 group-hover:text-white transition-colors select-none">Gabo</span>
+        <div class="text-xs mt-1 bg-black/50 text-white/60 rounded px-2 py-1 select-none">Admin</div>
+      </div>
+
+    </div>
+    </section>
+
+
+    <div class="mt-6 flex flex-col items-center space-y-4">
+      <p class="text-white/60 text-lg select-none">
+        Affiliated :
+      </p>
+      <img src="https://github.com/ero1337x/luvsx/blob/main/nigga.png?raw=true" alt="revshit" class="w-48 h-48 object-cover rounded-lg border border-white/20" />
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl">
+    </div>
+
+  <div class="user-columns">
+    <div class="user-tag">xo.revshit</div>
+    <div class="user-tag">xtazy #revshit</div>
+    <div class="user-tag">topthree #revshit</div>
+    <div class="user-tag">revgng #revshit</div>
+    <div class="user-tag">nexu #revshit</div>
+    <div class="user-tag">purpz #revshit</div>
+  </div>
+</div>
+
+  <section id="BG" class="section">
+    <div class="w-full max-w-md bg-black/60 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center space-y-4">
+      <div class="w-full flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img src="https://github.com/ero1337x/luvsx/blob/main/itim%20na%20van.png?raw=true" alt="Album Art" class="w-14 h-14 rounded-md object-cover" />
+          <div class="flex flex-col">
+            <span class="text-white font-semibold">ITIM NA VAN</span>
+            <span class="text-white/50 text-sm">SCOOP DOGG, DAARTH, SKINNY G, HELLMERRY, BUDDAHBEADS</span>
+          </div>
+        </div>
+        <button id="play-btn" class="w-12 h-12 bg-yellow-500 hover:bg-yellow-600 rounded-full flex items-center justify-center transition">
+          <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full relative h-2 bg-white/20 rounded-full overflow-hidden"><div id="progress-bar" class="absolute h-full bg-yellow-500 w-0"></div></div>
+      <div class="w-full flex justify-between text-sm text-white/50">
+        <span id="current-time">0:00</span><span id="duration">0:00</span>
+      </div>
+      <audio id="bg-audio" src="https://github.com/ero1337x/luvsx/raw/refs/heads/main/ITIM%20NA%20VAN.mp3" preload="auto"></audio>
+    </div>
+  </section>
+
+  <section id="us" class="section /90 text-center">
+    <p class="text-lg text-white/60">join us - </p>
+    <a href="https://discord.gg/gnja" class="text-white hover:underline text-xl">discord.gg/gnja</a>
+  </section>
+  <script>
+    const audio = document.getElementById('bg-audio');
+    const btn = document.getElementById('play-btn');
+    const icon = document.getElementById('play-icon');
+    const progressBar = document.getElementById('progress-bar');
+    const currentTimeEl = document.getElementById('current-time');
+    const durationEl = document.getElementById('duration');
+
+    window.addEventListener('DOMContentLoaded', () => {
+      audio.play().then(() => { 
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>'; 
+      }).catch(() => {});
+    });
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+      } else {
+        audio.pause();
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"/>';
+      }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = percent + '%';
+      currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+    audio.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(audio.duration);
+    });
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60).toString().padStart(2,'0');
+      return `${m}:${s}`;
+    }
+  </script>
+</body>
+</html>
